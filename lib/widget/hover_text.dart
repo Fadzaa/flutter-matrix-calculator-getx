@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_matrix/app/modules/home/controllers/home_controller.dart';
 import 'package:getx_matrix/widget_controller/matrix_controller.dart';
 
 import '../helper/themes.dart';
@@ -21,7 +22,7 @@ class HoverText extends StatefulWidget {
 class _HoverTextState extends State<HoverText> {
   @override
   Widget build(BuildContext context) {
-    final controller = Get.put(MatrixController());
+    final controller = Get.put(HomeController());
     return MouseRegion(
       onEnter: (_) {
         controller.changeHoverState(true, widget.keyString);

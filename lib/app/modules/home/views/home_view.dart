@@ -2,15 +2,15 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 import 'package:get/get.dart';
+import 'package:getx_matrix/app/modules/home/controllers/home_controller.dart';
 import 'package:getx_matrix/helper/themes.dart';
 import 'package:getx_matrix/widget/btn_action.dart';
 import 'package:getx_matrix/widget/hover_text.dart';
-import 'package:getx_matrix/widget_controller/matrix_controller.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 import '../../../../widget/matrix_field.dart';
 
-class HomeView extends GetView<MatrixController> {
+class HomeView extends GetView<HomeController> {
   const HomeView({Key? key}) : super(key: key);
 
   @override

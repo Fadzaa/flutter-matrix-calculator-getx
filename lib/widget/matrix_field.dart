@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:getx_matrix/app/modules/home/controllers/home_controller.dart';
 import 'package:getx_matrix/helper/themes.dart';
 
 import '../widget_controller/matrix_controller.dart';
 
-class MatrixField extends GetView<MatrixController> {
+class MatrixField extends GetView<HomeController> {
   final List<TextEditingController> controllers;
   final String label;
   final bool readOnly;
