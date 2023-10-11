@@ -48,8 +48,8 @@ class HomeView extends GetView<MatrixController> {
 
                     SizedBox(width: 60,),
 
-                    //TODO
-                    // Obx(() => ButtonAction(onTap: () => controller.calculate(),),)
+
+                    ButtonAction(onTap: () => controller.calculate(),)
                   ],
                 )
             ),

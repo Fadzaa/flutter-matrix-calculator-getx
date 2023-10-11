@@ -19,39 +19,31 @@ class ButtonAction extends StatelessWidget {
     return  InkWell(
       onTap: onTap,
 
-      child: MouseRegion(
-        onEnter: (_) {
-          controller.buttonHover.value = true;
-        },
+      child: Container(
+        width: 306,
+        height: 115,
+        decoration: BoxDecoration(
+            color: colorPrimary,
+            // controller.buttonHover.value ? colorPrimary : Colors.white,
+            borderRadius: const BorderRadius.only(
+                topLeft: Radius.circular(20),
+                bottomLeft: Radius.circular(20)
+            )
+        ),
+        child: Row(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
 
-        onExit: (_) {
-          controller.buttonHover.value = false;
-        },
-        child: Container(
-          width: 306,
-          height: 115,
-          decoration: BoxDecoration(
-              color: controller.buttonHover.value ? colorPrimary : Colors.white,
-              borderRadius: const BorderRadius.only(
-                  topLeft: Radius.circular(20),
-                  bottomLeft: Radius.circular(20)
-              )
-          ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
+            SvgPicture.asset("images/icon_run.svg", width: 40, height: 40, color: Color(0xFFDEDEDE),),
 
-              SvgPicture.asset("images/icon_back.svg", width: 40, height: 40, color: Color(0xFFDEDEDE),),
+            const SizedBox(width: 18,),
 
-              const SizedBox(width: 18,),
-
-              Text("Back", style: tsRunText,),
+            Text("Run", style: tsRunText,),
 
 
 
 
-            ],
-          ),
+          ],
         ),
       ),
     );

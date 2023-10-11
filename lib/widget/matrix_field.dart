@@ -17,8 +17,7 @@ class MatrixField extends GetView<MatrixController> {
 
   @override
   Widget build(BuildContext context) {
-    return AnimatedContainer(
-      duration: Duration(milliseconds: 300), // Adjust the duration as needed
+    return Container(
       width: 350,
       height: 350,
       margin: EdgeInsets.symmetric(vertical: 20),
